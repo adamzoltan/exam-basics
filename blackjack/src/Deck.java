@@ -25,18 +25,37 @@ public class Deck {
     return cardColor.get(n);
   }
 
+  public String cardValue () {
+    int n = (int)(Math.random()*13);
+    List<String> cardValue = new ArrayList<>();
+    cardValue.add("2");
+    cardValue.add("3");
+    cardValue.add("4");
+    cardValue.add("5");
+    cardValue.add("6");
+    cardValue.add("7");
+    cardValue.add("8");
+    cardValue.add("9");
+    cardValue.add("10");
+    cardValue.add("J");
+    cardValue.add("Q");
+    cardValue.add("K");
+    cardValue.add("A");
+    return cardValue.get(n);
+  }
+
   public void fillDeck(int deckSize) {
     if (deckSize < 4) {
       for (int i = 0; i < deckSize; i++) {
         for (int j = 0; j < 4; j++) {
-          Card card = new Card("Queen", cardColor(j));
+          Card card = new Card(cardValue() , cardColor(j));
           deck.add(card);
         }
       }
     } else {
       int c = 0;
       for (int i = 0; i < deckSize; i++) {
-        Card card = new Card("Queen", cardColor(c));
+        Card card = new Card(cardValue(), cardColor(c));
         deck.add(card);
         c++;
         if (c == 4 ) {
@@ -45,9 +64,6 @@ public class Deck {
       }
     }
   }
-
-
-
 
   public String getCard (int i) {
     String card;
