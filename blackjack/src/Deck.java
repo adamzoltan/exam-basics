@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -26,7 +27,7 @@ public class Deck {
   }
 
   public String cardValue () {
-    int n = (int)(Math.random()*13);
+    int n = (int)(Math.random() * 13);
     List<String> cardValue = new ArrayList<>();
     cardValue.add("2");
     cardValue.add("3");
@@ -64,6 +65,12 @@ public class Deck {
       }
     }
   }
+
+  public void shuffle() {
+    Collections.shuffle(deck);
+  }
+
+  
 
   public String getCard (int i) {
     String card;
