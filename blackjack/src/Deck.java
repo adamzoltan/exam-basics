@@ -70,12 +70,11 @@ public class Deck {
     Collections.shuffle(deck);
   }
 
-  
-
-  public String getCard (int i) {
-    String card;
-    card= deck.get(i).getColor();
+  public Card draw() {
+    Card card = deck.get(deckSize-1);
+    deck.remove(deckSize-1);
     return card;
+
   }
 
 }
