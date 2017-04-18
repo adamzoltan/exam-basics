@@ -36,15 +36,17 @@ The application is accepted if:
 
 #### Your answer:
 [add your answer here]   
-1:   
-2:   
-3:   
-4:   
-5:   
-6:   
-7:   
-8:   
+1: head
+2: return type
+3: name of the method
+4: type of the parameter 
+5: name of the parameter
+6: new variable, declared in the method  
+7: body
+8: return value od the method  
 
 ### What is the constructor? When it is used? [2p]
-#### Your answer:
-[add your answer here]
+#### Your answer: 
+The constructor defines how an object of a class should be created. We use it when we make a new class and we want to
+create objects from that class.
+
