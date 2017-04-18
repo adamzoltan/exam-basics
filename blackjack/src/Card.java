@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Adam on 2017. 04. 18..
  */
@@ -24,5 +27,11 @@ public class Card {
 
   public void setColor(String color) {
     this.color = color;
+  }
+
+  @Override
+  public String toString() {
+    String info = getValue() + " " + getColor();
+    return info;
   }
 }

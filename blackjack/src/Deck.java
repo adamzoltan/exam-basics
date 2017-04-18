@@ -72,7 +72,8 @@ public class Deck {
 
   public Card draw() {
     Card card = deck.get(deckSize-1);
-    //deck.remove(deckSize - 1);
+    deck.remove(deckSize-1);
+    deckSize = deckSize - 1;
     return card;
 
   }
