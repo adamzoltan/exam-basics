@@ -72,9 +72,55 @@ public class Deck {
 
   public Card draw() {
     Card card = deck.get(deckSize-1);
-    deck.remove(deckSize-1);
+    //deck.remove(deckSize - 1);
     return card;
 
+  }
+
+  public int countDiamond() {
+    int counter = 0;
+    for (int i = 0; i < deckSize; i++) {
+      if (deck.get(i).getColor().equals("Diamonds")) {
+        counter ++;
+      }
+    }
+    return counter;
+  }
+
+  public int countClubs() {
+    int counter = 0;
+    for (int i = 0; i < deckSize; i++) {
+      if (deck.get(i).getColor().equals("Clubs")) {
+        counter ++;
+      }
+    }
+    return counter;
+  }
+
+  public int countHearts() {
+    int counter = 0;
+    for (int i = 0; i < deckSize; i++) {
+      if (deck.get(i).getColor().equals("Hearts")) {
+        counter ++;
+      }
+    }
+    return counter;
+  }
+
+  public int countSpades() {
+    int counter = 0;
+    for (int i = 0; i < deckSize; i++) {
+      if (deck.get(i).getColor().equals("Spades")) {
+        counter ++;
+      }
+    }
+    return counter;
+  }
+
+  @Override
+  public String toString() {
+    String info = deckSize + " cards - " + countClubs() + " Clubs, " + countDiamond() + " Diamonds, " + countHearts() + " Hearts, " + countSpades() + " Spades " ;
+    return info;
   }
 
 }
